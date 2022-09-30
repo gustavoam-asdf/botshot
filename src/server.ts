@@ -1,5 +1,5 @@
 import { Server } from "http"
-import app from "./app"
+import { app } from "./app"
 
 export const server: Server = app.listen(app.get("port"), () => {
 	console.log(

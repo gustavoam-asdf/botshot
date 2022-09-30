@@ -1,6 +1,7 @@
 import type { Application } from "express"
 import express from "express"
 import path from "path"
+import { router } from "./router"
 
 const app: Application = express()
 
@@ -15,4 +16,6 @@ app.use(express.static(STATIC_FILES_PATH, {
 	maxAge: 31557600000
 }))
 
-export default app
+app.use("/api", router)
+
+export { app }
