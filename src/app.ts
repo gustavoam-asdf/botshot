@@ -1,5 +1,6 @@
 import type { Application } from "express"
 import express from "express"
+import morgan from "morgan"
 import path from "path"
 import { router } from "./router"
 
@@ -15,6 +16,8 @@ const STATIC_FILES_PATH = path.join(__dirname, "../public")
 app.use(express.static(STATIC_FILES_PATH, {
 	maxAge: 31557600000
 }))
+
+app.use(morgan("dev"))
 
 app.use("/api", router)
 
