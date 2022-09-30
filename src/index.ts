@@ -1,14 +1,15 @@
-import type { Application } from "express"
+import type { Application, Request, Response } from "express"
+
 import express from "express"
 
 const app: Application = express()
 
-const port = 3000
+const PORT = process.env.PORT || 3000
 
-app.get("/", (_req, res) => {
+app.get("/", (_req: Request, res: Response) => {
 	res.send("TypeScript With Express")
 })
 
-app.listen(port, () => {
-	console.log(`TypeScript with Express http://localhost:${port}/`)
+app.listen(PORT, () => {
+	console.log(`Server listening on http://localhost:${PORT}/`)
 })
