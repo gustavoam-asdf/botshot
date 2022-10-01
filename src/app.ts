@@ -1,5 +1,5 @@
 import type { Application } from "express"
-import { LOG_FORMAT } from "./config"
+import { LOG_FORMAT } from "./Shared/config"
 import express from "express"
 import morgan from "morgan"
 import path from "path"
