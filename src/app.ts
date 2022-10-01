@@ -1,13 +1,11 @@
 import type { Application } from "express"
+import { LOG_FORMAT } from "./config"
 import express from "express"
 import morgan from "morgan"
 import path from "path"
 import { router } from "./router"
 
 const app: Application = express()
-
-const PORT = process.env.PORT || 3000
-app.set("port", PORT)
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
@@ -17,7 +15,7 @@ app.use(express.static(STATIC_FILES_PATH, {
 	maxAge: 31557600000
 }))
 
-app.use(morgan("dev"))
+app.use(morgan(LOG_FORMAT))
 
 app.use("/api", router)
 

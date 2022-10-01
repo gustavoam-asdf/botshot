@@ -1,4 +1,5 @@
 export const PORT = process.env.PORT || 3000
+export const LOG_FORMAT = process.env.LOG_FORMAT || "dev"
 export const DB_NAME = process.env.DB_NAME || "root"
 export const DB_HOST = process.env.DB_HOST || "localhost"
 export const DB_PASSWORD = process.env.DB_PASSWORD || "root"
