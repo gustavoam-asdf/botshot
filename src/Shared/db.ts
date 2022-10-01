@@ -9,3 +9,5 @@ export const mysqlPool = createPool({
 	port: DB_PORT,
 	database: DB_NAME
 })
+
+mysqlPool.on("connection", () => console.log("Database is connected"))
