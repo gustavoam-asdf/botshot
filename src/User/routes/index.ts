@@ -1,20 +1,13 @@
-import { Request, Response, Router } from "express"
-
-import { mysqlPool } from "../../Shared/db"
+import { Router } from "express"
+import { userController } from "../controllers"
 
 const userRouter = Router()
 
 userRouter
-	.route("/")
-	.get((req: Request, res: Response) => {
-		res.send("Hola desde el router del usuario")
-	})
-
-userRouter
-	.route("/ping")
-	.get(async (req: Request, res: Response) => {
-		const [result] = await mysqlPool.query("SELECT 'mensajedb' as result, 2 as number ;")
-		res.send(result)
-	})
+	.get("/", userController.getAllUsers)
+	.get("/:id", userController.getOneUser)
+	.post("/", userController.createUser)
+	.put("/:id", userController.updateUser)
+	.delete("/:id", userController.deleteUser)
 
 export { userRouter }
