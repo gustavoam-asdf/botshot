@@ -1,15 +1,360 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
 	<meta charset="UTF-8">
+	<meta content="text/html; charset=UTF-8; X-Content-Type-Options=nosniff" http-equiv="Content-Type" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>BotSHOT</title>
+	<link rel="stylesheet"  type="text/css" href="./css/style.css">
+	<link rel="stylesheet"  type="text/css" href="./sass/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-	<h1>Hola mundo</h1>
-</body>
+	<div>
+		<!--- Encabezado-->
+	<nav class="navbar navbar-expand-lg navbar-light  bg-light   ml-">
+		<div class="container">
+		<a class="navbar-brand logo mt-1" href="#">
+				<img src="img/logo_empresa.png" width="248px"  height="200px" alt="">
+			
+			</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon text-white"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNavDropdown">
+				<ul class="navbar-nav menu mx-auto" >
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Inicio<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#experience">SobreNosotros</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="#profile">Construccion del AV</a>
+				</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#skills">Contactanos</a>
+					</li>
+					
+				<li class="nav-item">
+					<a class="nav-link" data-toggle="modal" data-target="#myModal" href="#">Iniciar Sesion</a>
+				</li>
+				</ul>
+			</div>
+			</div>
+		</nav>
+		<!--IMAGEN_BANNER-->
+		<div
+		class="banner-image w-100 vh-100 d-flex justify-content-center align-items-center " >
+
+		<div class="content text-center">
+				</div>
+		</div>
+
+	<!--Contenido-->
+		<div class="horizontal-padding vertical-padding">
+		<section class="profile" >
+			<div class="profile-info">
+				<h1 class="profile-title">Asistente Virtual Bot Shot para finanzas personales</h1>
+				<p class="profile-details">
+					Nuestro sistema experto esta enfocado para facilitarte a tomar buenas deciciones 
+				</p>
+				<button class="profile-btn ">Prueba Aqui</button>
+			</div>
+			<span class="profile-img-section">
+			<img
+							class="profile-img"
+							src="./img/bot_shot.png"
+							 width="400px" height="450px" alt="programador"
+						/>
+				<div class="profile-img-line"></div>
+			</span>
+		</section>
+		</div>
+		
+		 <section class="experiences" id="experience">
+					<img src="./img/wave.svg" alt="división" class="wave" />
+					<div class="experiences-body">
+						<h2 class="experiences-title">¿sOBRE NONOSOTROS?</h2>
+						<div class="experiences-grid">
+							<div class="empty"></div>
+							<div class="line"></div>
+							<div class="experience">
+								<div class="experience-date">EMPRESA</div>
+						 
+								<div class="experience-description">
+								Somos un negocio que nos dedicamos a ayudar a las personas a tomar buenas decicisiones en sus finanzas personales mediante un asistente virtual llamado "BotShot"
+								</div>
+							</div>
+							<div class="experience experience_left">
+								<div class="experience-date">MISION</div>
+							 
+						
+								<div class="experience-description">
+								Es que todos nuestros usuarios puedan acceder a la educación financiera y emprendedora de manera gratuita, para que les sirva como herramientas para desarrollar todo su potencial.
+								</div>
+							</div>
+							<div class="line"></div>
+							<div class="empty"></div>
+							<div class="empty"></div>
+							<div class="line"></div>
+							<div class="experience">
+								<div class="experience-date">VISION</div>
+						
+								<div class="experience-description">
+								Es llegar a ser una aplicación líder y referente en educación financiera y emprendimiento para nuestros usuarios, a nivel internacional, contribuyendo al desarrollo integral y bienestar de las personas
+								</div>
+							</div>
+						</div>
+					</div>
+					<img src="./img/wave.svg" alt="división" class="wave wave_bottom" />
+				</section>
+				<div class="modal fade" id="myModal" aria-labelledby="exampleModalLabel">
+					
+					<div class="modal-dialog" >
+						
+							<div class="modal-content bg-light " style="height: 875px; width:410px; position:relative; left:9px;">
+									
+										
+									<div class="login-wrap">
+										<button type="button" class="close mx-auto text-white" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									<div class="login-html">
+									
+									<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sing In</label>
+	<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrar</label>
+	<div class="login-form">
+	<div class="sign-in-htm">
+	<form action=" " method="POST">
+	<div class="group">
+				<label for="user" class="label"  >Ususario</label>
+				<input id="user" type="text" class="input" name="usuario"  >
+			</div>
+			<div class="group">
+				<label for="pass" class="label">Contraseña</label>
+				<input id="pass" type="password" class="input" data-type="password" name="contrasena">
+			</div>
+		
+	
+			<div class="group">
+			<button class="button text-white" type="submit" >Iniciar Sesion</button>
+			</div>
+			</form> 
+			
+			<div class="hr"></div>
+			<div class="foot-lnk">
+				<a href="#forgot">Forgot Password?</a>
+			</div>
+			<div class="social-media-links">
+			<!-- you can see the inside links class anchor a tag is there so we need to add the style inside anchor tag -->
+			<div class="links">
+					<a href=""><i class="fa fa-twitter" aria-hidden="true"></i></a>
+					<a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+					<a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a>
+					<a href=""><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+			</div>
+	</div>
+	</div>
+	    <div class="sign-up-htm">
+		<form action="http://localhost/page-computers/perfil/cliente/registrar.php " method="POST">
+			<div class="group">
+				<label for="user" class="label">Dni</label>
+				<input id="user" type="text" class="input" name="DNI">
+			</div>
+			<div class="group">
+				<label for="user" class="label">Nombre Completo</label>
+				<input id="user" type="text" class="input" name="nombre">
+			</div>
+			<div class="group">
+				<label for="user" class="label">Telefono</label>
+				<input id="user" type="text" class="input"name="telefono" >
+			</div>
+		
+			<div class="group">
+				<label for="pass" class="label">Email Address</label>
+				<input id="pass" type="text" class="input" name="correo">
+			</div>
+			<div class="group">
+				<label for="user" class="label">Usuario</label>
+				<input id="user" type="text" class="input"name="usuario" >
+			</div>
+		
+			<div class="group">
+				<label for="pass" class="label">Contraseña</label>
+				<input id="pass" type="password" class="input" data-type="password name" name="contrasena">
+			</div>
+
+			<div class="group">
+			<button class="button text-white" type="submit">Registrar cuenta</button>
+			</div>
+		</form>
+			<div class="hr"></div>
+		</div>
+	</div>
+									</div>
+									</div>
+									</div>
+							</div>
+			</div>
+
+
+
+			
+
+
+
+
+				
+	
+				<div class="horizontal-padding vertical-padding">
+				<section class="profile" id="profile">
+					<div class="profile-info">
+						<h1 class="profile-title">Componentes del Sistema Experto Bot Shot</h1>
+						<p class="profile-details">
+							Para poder realizar este sistema experto nos enfocamos que contenga ciertas funciones para el uso adecuado
+						</p>
+						
+					</div>
+					<span class="profile-img-section">
+						<img
+							class="profile-img"
+							src="./img/bot_shot.png"
+							 width="400px" height="450px" alt="programador"
+						/>
+						<div class="profile-img-line"></div>
+					</span>
+				</section>
+			</div>
+			
+		
+
+
+				<section class="experiences" id="experience">
+					<img src="./img/wave.svg" alt="división" class="wave" />
+					<div class="experiences-body">
+						<h2 class="experiences-title">Contactanos</h2>
+
+
+					
+						<footer class="text-center text-lg-start  text-muted">
+			<!-- Section: Social media -->
+			<section id="skills" class="d-flex justify-content-center justify-content-lg-between p-4 ">
+				<div>
+					<a href="" class="me-4 link-secondary">
+						<i class="fab fa-facebook-f"></i>
+					</a>
+					<a href="" class="me-4 link-secondary">
+						<i class="fab fa-twitter"></i>
+					</a>
+					<a href="" class="me-4 link-secondary">
+						<i class="fab fa-google"></i>
+					</a>
+					<a href="" class="me-4 link-secondary">
+						<i class="fab fa-instagram"></i>
+					</a>
+					<a href="" class="me-4 link-secondary">
+						<i class="fab fa-linkedin"></i>
+					</a>
+					<a href="" class="me-4 link-secondary">
+						<i class="fab fa-github"></i>
+					</a>
+				</div>
+				<!-- Right -->
+			</section>
+			<!-- Section: Social media -->
+		
+			<!-- Section: Links  -->
+			<section class="">
+				<div class="container text-center text-white text-md-start mt-5">
+					<!-- Grid row -->
+					<div class="row mt-3">
+						<!-- Grid column -->
+						<div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+							<!-- Content -->
+							<h6 class="text-uppercase fw-bold mb-4">
+								<i class="fas fa-gem me-3 text-secondary"></i>Company name
+							</h6>
+							<p>
+								Here you can use rows and columns to organize your footer content. Lorem ipsum
+								dolor sit amet, consectetur adipisicing elit.
+							</p>
+						</div>
+						<!-- Grid column -->
+		
+						<!-- Grid column -->
+						<div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4">
+								Products
+							</h6>
+							<p>
+								<a href="#!" class="text-reset">Angular</a>
+							</p>
+							<p>
+								<a href="#!" class="text-reset">React</a>
+							</p>
+							<p>
+								<a href="#!" class="text-reset">Vue</a>
+							</p>
+							<p>
+								<a href="#!" class="text-reset">Laravel</a>
+							</p>
+						</div>
+						<!-- Grid column -->
+		
+						<!-- Grid column -->
+						<div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4">
+								Useful links
+							</h6>
+							<p>
+								<a href="#!" class="text-reset">Pricing</a>
+							</p>
+							<p>
+								<a href="#!" class="text-reset">Settings</a>
+							</p>
+							<p>
+								<a href="#!" class="text-reset">Orders</a>
+							</p>
+							<p>
+								<a href="#!" class="text-reset">Help</a>
+							</p>
+						</div>
+						<!-- Grid column -->
+		
+						<!-- Grid column -->
+						<div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4" style="background-color:transparent">
+							<!-- Links -->
+							<h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+							<p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
+							<p>
+								<i class="fas fa-envelope me-3 text-secondary"></i>
+								info@example.com
+							</p>
+							<p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+							<p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+						</div>
+						<!-- Grid column -->
+					</div>
+					<!-- Grid row -->
+				</div>
+			</section>
+			<div class="text-center text-white p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+				© 2021 Copyright:
+				<a class="text-reset fw-bold text-white" href="#">Desarrolladores de la Unheval</a>
+			</div>
+		</footer>
+					</div>
+				</section>
+
+			</div>
+
+			
+			<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+			<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+			<script type="text/javascript" src=".js/app.js"></script>
+		</body>
 
 </html>
