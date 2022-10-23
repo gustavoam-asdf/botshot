@@ -105,7 +105,7 @@ a {
 
 .menu a::after {
   content: "";
-  background-color: var(--secundary-color);
+  background-color: var(--primary-color);
   position: absolute;
   left: 0;
   top: calc(100% + 4px);
@@ -417,23 +417,19 @@ justify-content: space-between;
     margin: 20px;
   }
 }
-
-
-  
   .login-wrap{
       width:100%;
       margin:auto;
-    background:url("../img/s_1.png")  ;  
+    background:url("../img/img_login2.png")  ;  
   background-size: cover;
   opacity: .9;
       max-width:900px;
       height:400px;
     max-height: 320px;
       position:relative;
-  
       z-index:1;
 			top:-277px;
-    
+			border-top:1px solid transparent;
   }
 	
   .login-html{
@@ -480,7 +476,7 @@ justify-content: space-between;
   .login-html .sign-up:checked + .tab{
       color:#000
     ;
-      border-color: #1c2120 !important;;
+      border-color: #124f88 !important;;
   }
   .login-form{
       min-height:600px;
@@ -511,6 +507,10 @@ justify-content: space-between;
 			box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   }
   
+  .login-form .group .button{
+    padding:10px 30px 30px 30px;
+  }
+
   .login-form .group input[data-type="password"]{
       text-security:circle;
       -webkit-text-security:circle;
@@ -523,9 +523,12 @@ justify-content: space-between;
   text-align: left;
   }
   .login-form .group .button{
-      background: #2a364e !important;;
+      background: #124f88 !important;;
   }
-
+	.login-form .group .button:hover {
+		filter: brightness(130%);
+	}
+	
 
   .login-form .group label .icon{
       width:15px;
@@ -614,7 +617,7 @@ justify-content: space-between;
     border-radius: 50%;
     color: #fff;
     overflow: hidden;
-		top:45px;
+		top:28px;
 }
 /* for small icon u can use this  */
 /* .links a {
@@ -647,7 +650,7 @@ justify-content: space-between;
 .links a::before{
     content: '';
     position: absolute;
-    top: -70%;
+    top: -50%;
     left: -60%;
     width: 50px;
     height: 170px;

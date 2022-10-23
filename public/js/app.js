@@ -7,8 +7,6 @@
 window.addEventListener("scroll", function () {
 	var nav = document.querySelector("nav");
 		nav.classList.toggle("sticky", window.scrollY > 0) ;
- 
- 
  });
  const menu = document.querySelector(".menu");
 const openMenuBtn = document.querySelector(".open-menu");

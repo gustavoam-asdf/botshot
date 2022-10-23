@@ -4688,7 +4688,7 @@ progress {
 }
 
 .close {
-  font-size: calc(1.275rem + 0.3vw);
+  font-size: calc(1.275rem + 0.8vw);
   font-weight: 700;
   line-height: 1;
   color: #000;
@@ -4697,7 +4697,7 @@ progress {
 }
 @media (min-width: 1200px) {
   .close {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
   }
 }
 .close:hover {
@@ -4825,7 +4825,7 @@ button.close {
   background-color: #fff;
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 0.3rem;
+  border-radius: 0.8rem;
   outline: 0;
 }
 
