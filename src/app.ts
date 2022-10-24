@@ -17,7 +17,6 @@ const STATIC_FILES_PATH = path.join(__dirname, "../public")
 app.use(express.static(STATIC_FILES_PATH, {
 	maxAge: 31557600000
 }))
-
 app.use(morgan(LOG_FORMAT))
 
 // eslint-disable-next-line quotes
