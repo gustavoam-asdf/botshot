@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 export class InteractiveChatbox {
 	constructor(button, chatbox, icons) {
 		this.args = {
@@ -39,3 +40,18 @@ export class InteractiveChatbox {
 		}
 	}
 }
+// const d =document,w=window
+
+// function scrollTopButton(btn)
+// {
+// 	const $scrollbtn=d.querySelector(btn)
+
+// 	w.addEventListener("scroll",(e)=>
+// 	{
+// 		let scrollTop =w.pageXOffset || d.documentElement.scrollTop
+
+	
+
+// 	})
+
+// }
