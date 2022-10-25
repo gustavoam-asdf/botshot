@@ -139,8 +139,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	background: #eee;
-	width: 300px;
-	height: 350px;
 	z-index: -123456;
 	opacity: 0;
 	transition: all .5s ease-in-out;
@@ -193,4 +191,8 @@ body {
 .chatbox__footer {
 	position: sticky;
 	bottom: 0;
+}
+
+.chatbox__footer p {
+	margin: 0;
 }
