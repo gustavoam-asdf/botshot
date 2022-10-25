@@ -26,13 +26,15 @@ myform.addEventListener("submit", (e) => {
 const registerform = globalThis.document.getElementById("registerform")
 registerform.addEventListener("submit", (e) => {
 	e.preventDefault()
-	let id = globalThis.document.getElementById("id").value
+	let dni = globalThis.document.getElementById("dni").value
 	let name = globalThis.document.getElementById("name").value
 	let lastName = globalThis.document.getElementById("lastName").value
 	let email = globalThis.document.getElementById("email").value
 	let nameuser = globalThis.document.getElementById("nameuser").value
 	let password = globalThis.document.getElementById("password").value
 
+	console.table(dni, name, lastName, email, nameuser, password)
+	
 	fetch("/register", {
 		method: "Post",
 		headers: {
@@ -40,7 +42,7 @@ registerform.addEventListener("submit", (e) => {
 			"Content-Type": "application/json"
 		},
 		body: JSON.stringify({
-			id: id,
+			dni: dni,
 			name: name,
 			lastName: lastName,
 			email: email,

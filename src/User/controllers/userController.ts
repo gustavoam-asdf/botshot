@@ -3,10 +3,10 @@ import { iUser } from "../models/user"
 import { userService } from "../services"
 
 export async function getOneUser(req: Request, res: Response) {
-	const { id } = req.params as iUser
+	const { dni } = req.params as iUser
 	const { email, nameuser, password } = req.body as iUser
 	const user = await userService.getOneUser({
-		id,
+		dni,
 		nameuser,
 		email,
 		password
@@ -21,7 +21,7 @@ export async function getAllUsers(req: Request, res: Response) {
 
 export async function createUser(req: Request, res: Response) {
 	const {
-		id,
+		dni,
 		name,
 		lastName,
 		email,
@@ -29,7 +29,7 @@ export async function createUser(req: Request, res: Response) {
 		password
 	} = req.body as iUser
 	const user = await userService.createUser({
-		id,
+		dni,
 		name,
 		lastName,
 		email,
@@ -47,7 +47,7 @@ export async function createUser(req: Request, res: Response) {
 }
 
 export async function updateUser(req: Request, res: Response) {
-	const { id } = req.params as iUser
+	const { dni } = req.params as iUser
 	const {
 		name,
 		lastName,
@@ -58,7 +58,7 @@ export async function updateUser(req: Request, res: Response) {
 	} = req.body as iUser
 
 	const user = await userService.updateUser({
-		id,
+		dni,
 		name,
 		lastName,
 		email,
@@ -70,10 +70,10 @@ export async function updateUser(req: Request, res: Response) {
 }
 
 export async function deleteUser(req: Request, res: Response) {
-	const { id } = req.params as iUser
+	const { dni } = req.params as iUser
 	const { nameuser, email, password } = req.body as iUser
 	const user = await userService.deleteUser({
-		id,
+		dni,
 		email,
 		nameuser,
 		password
@@ -92,11 +92,11 @@ export async function verifyUser(request: Request, res: Response) {
 
 	if (user.length == 0) {
 		return res.json({
-			success: true,
+			success: false,
 			msg: "Usuario no existe",
-
 		})
 	} else {
+		// globalThis.location.reload()
 		return res.json(user)
 	}
 }

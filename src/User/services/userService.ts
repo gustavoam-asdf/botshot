@@ -2,27 +2,27 @@ import { User, iUser } from "../models/user"
 
 import { mysqlPool } from "../../Shared/db"
 
-type iUserIdentifiers = Pick<iUser, "id" | "nameuser" | "email" | "password">
-type iUserIdentifiersCreate = Pick<iUser, "id" | "name" | "lastName" | "email" | "nameuser" | "password">
+type iUserIdentifiers = Pick<iUser, "dni" | "nameuser" | "email" | "password">
+type iUserIdentifiersCreate = Pick<iUser, "dni" | "name" | "lastName" | "email" | "nameuser" | "password">
 type iUserIdentifiers1 = Pick<iUser, "nameuser" | "password">
 
 export async function getOneUser({
-	id,
+	dni,
 	nameuser,
 	email,
 	password,
 }: iUserIdentifiers) {
 	const query = /*sql*/ `
 		SELECT
-			id,
+			dni,
 			name,
 			lastName,
 			email,
 			password,
 			profile_id
-		FROM user WHERE email = ? AND password = ? AND id = ?
+		FROM user WHERE email = ? AND password = ? AND dni = ?
 	`
-	const [result] = await mysqlPool.query<iUser[]>(query, [nameuser, email, password, id])
+	const [result] = await mysqlPool.query<iUser[]>(query, [nameuser, email, password, dni])
 
 	return result[0]
 }
@@ -30,7 +30,7 @@ export async function getOneUser({
 export async function getAllUsers() {
 	const query = /*sql*/ `
 		SELECT
-			id,
+			dni,
 			name,
 			lastName,
 			email,
@@ -43,7 +43,7 @@ export async function getAllUsers() {
 }
 
 export async function createUser({
-	id,
+	dni,
 	name,
 	lastName,
 	email,
@@ -51,18 +51,18 @@ export async function createUser({
 	password
 }: iUserIdentifiersCreate) {
 	const querySelector = /*sql*/`
-	SELECT id FROM user WHERE id =?
+	SELECT dni FROM user WHERE dni =?
 	`
 	const [resultSelector] = await mysqlPool.query<iUser[]>(querySelector, [
-		id
+		dni
 	])
 	if (resultSelector.length == 0) {
 		const query = /*sql*/ `
-		INSERT INTO user (id,name,lastName, email,nameuser,password)
+		INSERT INTO user (dni,name,lastName, email,nameuser,password)
 		VALUES (?,?, ?, ?, ?, ?)
 	`
 		const [result] = await mysqlPool.query<iUser[]>(query, [
-			id,
+			dni,
 			name,
 			lastName,
 			email,
@@ -93,7 +93,7 @@ export async function verifyuser({
 }
 
 export async function updateUser({
-	id,
+	dni,
 	name,
 	lastName,
 	email,
@@ -103,7 +103,7 @@ export async function updateUser({
 	const query = /*sql*/ `
 		UPDATE user
 		SET name = ?, lastName = ?, email = ?, password = ?, profile_id = ?
-		WHERE id = ?
+		WHERE dni = ?
 	`
 	const [result] = await mysqlPool.query<iUser[]>(query, [
 		name,
@@ -111,21 +111,21 @@ export async function updateUser({
 		email,
 		password,
 		profile_id,
-		id,
+		dni,
 	])
 
 	return result
 }
 
 export async function deleteUser({
-	id,
+	dni,
 	email,
 	password
 }: iUserIdentifiers) {
 	const query = /*sql*/ `
-		DELETE FROM user WHERE email = ? AND password = ? AND id = ?
+		DELETE FROM user WHERE email = ? AND password = ? AND dni = ?
 	`
-	const [result] = await mysqlPool.query<iUser[]>(query, [email, password, id])
+	const [result] = await mysqlPool.query<iUser[]>(query, [email, password, dni])
 
 	return result
 }
