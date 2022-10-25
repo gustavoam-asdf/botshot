@@ -11,7 +11,7 @@ userRouter
 	.delete("/:id", userController.deleteUser)
 	.post("/register", userController.createUser)
 	.post("/", userController.verifyUser)
-	
+
 
 
 

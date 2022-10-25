@@ -2,8 +2,8 @@ import { User, iUser } from "../models/user"
 
 import { mysqlPool } from "../../Shared/db"
 
-type iUserIdentifiers = Pick<iUser,"id" | "nameuser" | "email" | "password">
-type iUserIdentifiersCreate = Pick<iUser,"id" |"name"|"lastName"| "email"  | "nameuser"  | "password">
+type iUserIdentifiers = Pick<iUser, "id" | "nameuser" | "email" | "password">
+type iUserIdentifiersCreate = Pick<iUser, "id" | "name" | "lastName" | "email" | "nameuser" | "password">
 type iUserIdentifiers1 = Pick<iUser, "nameuser" | "password">
 
 export async function getOneUser({
@@ -22,7 +22,7 @@ export async function getOneUser({
 			profile_id
 		FROM user WHERE email = ? AND password = ? AND id = ?
 	`
-	const [result] = await mysqlPool.query<iUser[]>(query, [nameuser,email, password, id])
+	const [result] = await mysqlPool.query<iUser[]>(query, [nameuser, email, password, id])
 
 	return result[0]
 }
@@ -49,15 +49,14 @@ export async function createUser({
 	email,
 	nameuser,
 	password
-}:iUserIdentifiersCreate) {
+}: iUserIdentifiersCreate) {
 	const querySelector = /*sql*/`
 	SELECT id FROM user WHERE id =?
 	`
 	const [resultSelector] = await mysqlPool.query<iUser[]>(querySelector, [
 		id
 	])
-	if(resultSelector.length==0)
-	{
+	if (resultSelector.length == 0) {
 		const query = /*sql*/ `
 		INSERT INTO user (id,name,lastName, email,nameuser,password)
 		VALUES (?,?, ?, ?, ?, ?)
@@ -72,11 +71,11 @@ export async function createUser({
 		])
 		return result
 	}
-	else{
+	else {
 
 		return resultSelector
 	}
-	
+
 }
 
 export async function verifyuser({

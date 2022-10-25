@@ -19,8 +19,6 @@ app.use(express.static(STATIC_FILES_PATH, {
 }))
 app.use(morgan(LOG_FORMAT))
 
-// eslint-disable-next-line quotes
-app.use('/',router)
-// eslint-disable-next-line quotes
+app.use("/", router)
 
 export { app }
