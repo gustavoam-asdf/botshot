@@ -106,11 +106,19 @@ body {
 }
 
 .chatbox__footer input {
-	border: none;
 	padding: 10px 10px;
 	border-radius: 30px;
 	text-align: center;
 	width: 80%;
+}
+
+.chatbox__footer button {
+	background-color: inherit;
+}
+
+.chatbox__footer :is(input, button) {
+	border: none;
+	outline: none;
 }
 
 .chatbox__send--footer {

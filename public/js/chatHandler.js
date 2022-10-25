@@ -20,3 +20,15 @@ chatbox.writeMessage({
 	mode: MESSAGE_MODE.BOTSHOT,
 	text: "¿Cuál es tu nombre?"
 })
+
+const $userMessageForm = globalThis.document.getElementById("userMessageForm")
+
+$userMessageForm.addEventListener("submit", (e) => {
+	e.preventDefault()
+	const { message } = $userMessageForm
+	chatbox.writeMessage({
+		mode: MESSAGE_MODE.USER,
+		text: message.value
+	})
+	message.value = ""
+})
