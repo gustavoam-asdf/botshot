@@ -1,4 +1,4 @@
-import { InteractiveChatbox } from "./Chat.js"
+import { InteractiveChatbox, MESSAGE_MODE } from "./Chat.js"
 
 const chatButton = globalThis.document.querySelector(".chatbox__button")
 const chatContent = globalThis.document.querySelector(".chatbox__support")
@@ -10,3 +10,13 @@ const icons = {
 const chatbox = new InteractiveChatbox(chatButton, chatContent, messagesBox, icons)
 chatbox.display()
 chatbox.toggleIcon(false, chatButton)
+
+chatbox.writeMessage({
+	mode: MESSAGE_MODE.USER,
+	text: "Hello, how can I help you???"
+})
+
+chatbox.writeMessage({
+	mode: MESSAGE_MODE.BOTSHOT,
+	text: "Yes I can"
+})

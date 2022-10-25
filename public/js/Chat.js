@@ -1,9 +1,9 @@
-export class InteractiveChatbox {
+export const MESSAGE_MODE = {
+	USER: "operator",
+	BOTSHOT: "visitor"
+}
 
-	static MESSAGE_MODE = {
-		USER: "operator",
-		BOTSHOT: "visitor"
-	}
+export class InteractiveChatbox {
 
 	constructor(button, chatbox, messagesBox, icons) {
 		this.args = {
