@@ -110,10 +110,12 @@ body {
 	padding: 10px 10px;
 	border-radius: 30px;
 	text-align: center;
+	width: 80%;
 }
 
 .chatbox__send--footer {
 	color: white;
+	margin-right: 10px;
 }
 
 .chatbox__button button,

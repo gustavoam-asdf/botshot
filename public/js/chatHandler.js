@@ -12,11 +12,11 @@ chatbox.display()
 chatbox.toggleIcon(false, chatButton)
 
 chatbox.writeMessage({
-	mode: MESSAGE_MODE.USER,
-	text: "Hello, how can I help you???"
+	mode: MESSAGE_MODE.BOTSHOT,
+	text: "¡Hola, yo soy BotSHOT 🤖!, el asistente que te ayudará a ahorrar"
 })
 
 chatbox.writeMessage({
 	mode: MESSAGE_MODE.BOTSHOT,
-	text: "Yes I can"
+	text: "¿Cuál es tu nombre?"
 })
