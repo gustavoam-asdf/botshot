@@ -50,6 +50,10 @@ body {
 	margin-right: 10px;
 }
 
+.chatbox__image--header img {
+	width: 4rem;
+}
+
 .chatbox__heading--header {
 	font-size: 1.2rem;
 	color: white;
