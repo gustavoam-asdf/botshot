@@ -1,11 +1,29 @@
 export class InteractiveChatbox {
-	constructor(button, chatbox, icons) {
+
+	static MESSAGE_MODE = {
+		USER: "operator",
+		BOTSHOT: "visitor"
+	}
+
+	constructor(button, chatbox, messagesBox, icons) {
 		this.args = {
 			button,
-			chatbox
+			chatbox,
+			messagesBox
 		}
 		this.icons = icons
 		this.state = false
+	}
+
+	writeMessage({ mode, text }) {
+		const { messagesBox } = this.args
+
+		const message = globalThis.document.createElement("div")
+		message.classList.add("messages__item")
+		message.classList.add(`messages__item--${mode}`)
+		message.innerHTML = text
+
+		messagesBox.appendChild(message)
 	}
 
 	display() {
