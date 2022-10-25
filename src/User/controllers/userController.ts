@@ -90,13 +90,20 @@ export async function verifyUser(request: Request, res: Response) {
 		password
 	})
 
-	if (user.length == 0) {
+	if (user.length === 0) {
+
 		return res.json({
 			success: false,
-			msg: "Usuario no existe",
+			msg: "Usuario no encontrado",
+			user: user,
 		})
+
 	} else {
 		// globalThis.location.reload()
-		return res.json(user)
+		return res.json({
+			success: true,
+			msg: "Sesión iniciada",
+			user: user,
+		})
 	}
 }

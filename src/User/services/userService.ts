@@ -82,11 +82,12 @@ export async function verifyuser({
 	nameuser,
 	password
 }: iUserIdentifiers1) {
-	const query = /*sql*/ `
-	SELECT
+	const query = /*sql*/ 
+	`
+		SELECT
 			nameuser,
 			password
-		 FROM user WHERE nameuser = ? AND password = ?
+		FROM user WHERE nameuser = ? AND password = ?
 	`
 	const [result] = await mysqlPool.query<iUser[]>(query, [nameuser, password])
 	return result
