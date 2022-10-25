@@ -1,11 +1,10 @@
-/* eslint-disable quotes */
 import { Request, Response } from "express"
-import { iUser } from '../models/user'
+import { iUser } from "../models/user"
 import { userService } from "../services"
 
 export async function getOneUser(req: Request, res: Response) {
 	const { id } = req.params as iUser
-	const { email,nameuser,password } = req.body as iUser
+	const { email, nameuser, password } = req.body as iUser
 	const user = await userService.getOneUser({
 		id,
 		nameuser,
@@ -37,14 +36,12 @@ export async function createUser(req: Request, res: Response) {
 		nameuser,
 		password
 	})
-	if(user.length==1)
-	{
+	if (user.length == 1) {
 		return res.json({
-			success: true ,
-			msg:'Usuario ya fue registrado',
+			success: true,
+			msg: "Usuario ya fue registrado",
 		})
-	}else
-	{
+	} else {
 		return res.json(user)
 	}
 }
@@ -81,27 +78,25 @@ export async function deleteUser(req: Request, res: Response) {
 		nameuser,
 		password
 	})
-	
+
 	res.json(user)
 }
 
 export async function verifyUser(request: Request, res: Response) {
-	
-	const {nameuser,password} = request.body as iUser
+
+	const { nameuser, password } = request.body as iUser
 	const user = await userService.verifyuser({
 		nameuser,
 		password
 	})
 
-	if(user.length==0)
-	{
+	if (user.length == 0) {
 		return res.json({
-			success: true ,
-			msg:'Usuario no existe',
-			
+			success: true,
+			msg: "Usuario no existe",
+
 		})
-	}else
-	{
+	} else {
 		return res.json(user)
 	}
 }
