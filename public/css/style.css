@@ -296,6 +296,7 @@ a {
 }
 
 .profile-img {
+	object-fit: contain;
 	width: 100%;
 	max-width: 400px;
 }
