@@ -48,7 +48,6 @@
 
 .chatbox__image--header {
 	margin-right: 10px;
-	position: fixed;
 }
 
 .chatbox__image--header img {
@@ -179,8 +178,8 @@
 
 /* HEADER */
 .chatbox__header {
-	position: sticky;
-	top: 0;
+	/* position: sticky; */
+	/* top: 0; */
 }
 
 /* MESSAGES */
