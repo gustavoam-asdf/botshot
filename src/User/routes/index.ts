@@ -1,11 +1,18 @@
-import { Request, Response, Router } from "express"
+/* eslint-disable quotes */
+import { Router } from "express"
+import { userController } from "../controllers"
 
 const userRouter = Router()
 
 userRouter
-	.route("/")
-	.get((req: Request, res: Response) => {
-		res.send("Hola desde el router del usuario")
-	})
+	.get("/", userController.getAllUsers)
+	.get("/findUser/:dni", userController.getOneUser)
+	.put("/:id", userController.updateUser)
+	.delete("/:id", userController.deleteUser)
+	.post("/register", userController.createUser)
+	.post("/", userController.verifyUser)
+
+
+
 
 export { userRouter }
