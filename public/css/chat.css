@@ -27,7 +27,7 @@
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 	position: fixed;
-	bottom: 1vh;
+	bottom: 6vh;
 	right: calc(4.25rem + 1vw);
 }
 
@@ -128,7 +128,7 @@
 .chatbox__button button,
 .chatbox__button button:focus,
 .chatbox__button button:visited {
-	padding: 10px;
+	padding: 15px;
 	background: white;
 	border: none;
 	outline: none;
@@ -138,8 +138,7 @@
 	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 	cursor: pointer;
 	position: fixed;
-	bottom: 1vh;
-
+	bottom: 5vh;
 	right: calc(2.25rem + 1vw);
 }
 
@@ -147,8 +146,8 @@
 =============== */
 .chatbox {
 	position: absolute;
-	bottom: 30px;
-	right: 30px;
+	bottom: 100px;
+	right: 100px;
 }
 
 /* CONTENT IS CLOSE */
@@ -165,7 +164,7 @@
 
 /* CONTENT ISOPEN */
 .chatbox--active {
-	transform: translateY(-40px);
+	transform: translateY(-60px);
 	z-index: 123456;
 	opacity: 1;
 }
