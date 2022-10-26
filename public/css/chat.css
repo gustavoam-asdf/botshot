@@ -51,6 +51,10 @@
 	position: fixed;
 }
 
+.chatbox__image--header img {
+	width: 4rem;
+}
+
 .chatbox__heading--header {
 	font-size: 1.2rem;
 	color: white;
@@ -103,14 +107,24 @@
 }
 
 .chatbox__footer input {
-	border: none;
 	padding: 10px 10px;
 	border-radius: 30px;
 	text-align: center;
+	width: 80%;
+}
+
+.chatbox__footer button {
+	background-color: inherit;
+}
+
+.chatbox__footer :is(input, button) {
+	border: none;
+	outline: none;
 }
 
 .chatbox__send--footer {
 	color: white;
+	margin-right: 10px;
 }
 
 .chatbox__button button,

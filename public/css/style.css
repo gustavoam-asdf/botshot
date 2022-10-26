@@ -81,6 +81,7 @@ a {
 }
 
 .logo img {
+	object-fit: contain;
 	border-radius: 50%;
 }
 
@@ -296,6 +297,7 @@ a {
 }
 
 .profile-img {
+	object-fit: contain;
 	width: 100%;
 	max-width: 400px;
 }
@@ -355,9 +357,9 @@ a {
 	}
 
 	.profile-img {
+		object-fit: contain;
 		width: 100%;
 		max-width: 600px;
-
 	}
 
 	.profile {
@@ -528,7 +530,6 @@ header {
 	padding: 10px 25px;
 	border-radius: 25px;
 	background: #fff;
-	;
 	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
@@ -537,9 +538,7 @@ header {
 }
 
 .login-form .group input[data-type="password"] {
-	text-security: circle;
 	-webkit-text-security: circle;
-
 }
 
 .login-form .group .label {

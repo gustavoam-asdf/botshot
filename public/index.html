@@ -4,21 +4,29 @@
 <head>
 	<meta charset="UTF-8">
 
+	<title>BotSHOT - Asistente Virtual</title>
+
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta http-equiv="Expires" content="0">
 	<meta http-equiv="Last-Modified" content="0">
 	<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
 	<meta http-equiv="Pragma" content="no-cache">
+	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
 	<link rel="stylesheet" " href=" ./css/style.css">
 	<link rel="stylesheet" href="./css/chat.css">
 	<link rel="stylesheet" href="./css/typing.css">
 	<link rel="stylesheet" href="./sass/styles.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-	<script type="module" src="./js/app.js"></script>
 
 </head>
 
 <body>
+
+	<!-- Área Response -->
+	<div id="alert">
+		
+	</div>
+
 	<div>
 		<nav class="navbar navbar-expand-lg navbar-light  bg-light   ml-">
 			<div class="container">
@@ -79,7 +87,7 @@
 		<section class="experiences" id="experience">
 			<img src="./img/wave.svg" alt="división" class="wave" />
 			<div class="experiences-body">
-				<h2 class="experiences-title">¿sOBRE NONOSOTROS?</h2>
+				<h2 class="experiences-title">¿SOBRE NONOSOTROS?</h2>
 				<div class="experiences-grid">
 					<div class="empty"></div>
 					<div class="line"></div>
@@ -356,45 +364,30 @@
 			<div class="chatbox__support">
 				<div class="chatbox__header">
 					<div class="chatbox__image--header">
-						<img src="./img/chat/avatar-bot.png" alt="image">
+						<img src="./img/logo.png" alt="image">
 					</div>
 					<div class="chatbox__content--header">
-						<h4 class="chatbox__heading--header">Chat support</h4>
-						<p class="chatbox__description--header">There are many variations of passages of Lorem Ipsum
-							available</p>
+						<h4 class="chatbox__heading--header">BotSHOT</h4>
+						<p class="chatbox__description--header">Asistente Virtual que te ayudará a manejar tus finanzas personales
+						</p>
 					</div>
 				</div>
 				<div class="chatbox__messages">
 					<div>
-						<div class="messages__item messages__item--visitor">
-							Can you let me talk to the support?
-						</div>
-						<div class="messages__item messages__item--operator">
-							Sure!
-						</div>
-						<div class="messages__item messages__item--visitor">
-							Need your help, I need a developer in my site.
-						</div>
-						<div class="messages__item messages__item--operator">
-							Hi... What is it? I'm a front-end developer, yay!
-						</div>
-						<div class="messages__item messages__item--typing">
-							<span class="messages__dot"></span>
-							<span class="messages__dot"></span>
-							<span class="messages__dot"></span>
-						</div>
 					</div>
 				</div>
-
-
-
-				<div class="chatbox__footer">
-					<img src="./img/chat/icons/emojis.svg" alt="">
-					<img src="./img/chat/icons/microphone.svg" alt="">
-					<input type="text" placeholder="Write a message...">
-					<p class="chatbox__send--footer">Send</p>
-					<img src="./img/chat/icons/attachment.svg" alt="">
-				</div>
+				<form class="chatbox__footer" id="userMessageForm">
+					<input type="text" placeholder="Write a message..." autocomplete="off" name="message">
+					<button type="submit" class="chatbox__send--footer">
+						<!-- A svg icon for button send message -->
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+							stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+							class="feather feather-send">
+							<line x1="22" y1="2" x2="11" y2="13"></line>
+							<polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+						</svg>
+					</button>
+				</form>
 			</div>
 			<div class="chatbox__button">
 				<button type="button"></button>
@@ -411,7 +404,10 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
+	<script type="module" src="./js/app.js"></script>
 
+	<!-- Script Modales -->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
