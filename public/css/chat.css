@@ -175,13 +175,6 @@
 	text-align: right;
 }
 
-
-/* HEADER */
-.chatbox__header {
-	/* position: sticky; */
-	/* top: 0; */
-}
-
 /* MESSAGES */
 .chatbox__messages {
 	margin-top: auto;
@@ -203,12 +196,6 @@
 
 .messages__item--visitor {
 	margin-right: auto;
-}
-
-/* FOOTER */
-.chatbox__footer {
-	/* position: sticky; */
-	/* bottom: 0; */
 }
 
 .chatbox__footer p {
