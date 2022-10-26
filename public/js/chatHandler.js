@@ -26,10 +26,8 @@ const chatbox = new InteractiveChatbox(chatButton, chatContent, messagesBox, ico
 chatbox.display()
 chatbox.toggleIcon(false, chatButton)
 
-chatbox.writeMessage({
-	mode: MESSAGE_MODE.BOTSHOT,
-	text: "¡Hola, yo soy BotSHOT 🤖!, el asistente que te ayudará a ahorrar"
-})
+// eslint-disable-next-line no-undef
+const LocaleDni = localStorage.getItem("dni")
 
 chatbox.writeMessage({
 	mode: MESSAGE_MODE.BOTSHOT,

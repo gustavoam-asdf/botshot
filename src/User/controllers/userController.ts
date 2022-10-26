@@ -4,14 +4,12 @@ import { userService } from "../services"
 
 export async function getOneUser(req: Request, res: Response) {
 	const { dni } = req.params as iUser
-	const { email, nameuser, password } = req.body as iUser
+	// const { email, nameuser, password } = req.body as iUser
+	// const { dni } = req.body as iUser|
 	const user = await userService.getOneUser({
 		dni,
-		nameuser,
-		email,
-		password
 	})
-	res.json(user)
+	return res.json(user)
 }
 
 export async function getAllUsers(req: Request, res: Response) {
@@ -36,13 +34,19 @@ export async function createUser(req: Request, res: Response) {
 		nameuser,
 		password
 	})
-	if (user.length == 1) {
+
+	if (user.length === 1) {
 		return res.json({
-			success: true,
-			msg: "Usuario ya fue registrado",
+			success: false,
+			msg: "Ocurrió un error al registrar el usuario",
+			user: user,
 		})
 	} else {
-		return res.json(user)
+		return res.json({
+			success: true,
+			msg: "Usuario fue registrado con éxito",
+			user: user,
+		})
 	}
 }
 
@@ -79,7 +83,11 @@ export async function deleteUser(req: Request, res: Response) {
 		password
 	})
 
-	res.json(user)
+	return res.json({
+		success: false,
+		msg: "Usuario eliminado",
+		user: user,
+	})
 }
 
 export async function verifyUser(request: Request, res: Response) {
@@ -99,7 +107,7 @@ export async function verifyUser(request: Request, res: Response) {
 		})
 
 	} else {
-		// globalThis.location.reload()
+
 		return res.json({
 			success: true,
 			msg: "Sesión iniciada",
