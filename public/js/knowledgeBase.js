@@ -27,6 +27,7 @@ const ruleIngresos = new Rule({
 	name: "Ingresos",
 	description: "Determina si los ingresos mensuales del usuario son bajos, medios o altos",
 	question: "¿Cuántos ingresos recibes mensualmente?",
+	fallback: "No entendí tu respuesta, por favor ingresa un número",
 	conditions: [
 		condicionIngresosBajos,
 		condicionIngresosMedios,
@@ -132,6 +133,7 @@ const ruleGastos = new Rule({
 	name: "Gastos",
 	description: "Determina si los gastos mensuales del usuario son bajos, medios o altos de acuerdo a sus ingreso",
 	question: "¿Cuántos gastos mensuales tienes?",
+	fallback: "No se pudo determinar el nivel de gastos, por favor ingresa un valor numérico",
 	conditions: [
 		condicionesGastosIngresoMinimo,
 		condicionesGastosIngresoMedio,
@@ -156,6 +158,7 @@ const ruleNivelEducativo = new Rule({
 	name: "Nivel educativo",
 	description: "Determina el nivel educativo del usuario",
 	question: "¿Cuál es tu nivel educativo?",
+	fallback: "No se pudo determinar el nivel educativo, por favor ingresa uno de los siguientes: Secundario, Superior",
 	conditions: [
 		conditionNivelSecundario,
 		conditionNivelSuperior
