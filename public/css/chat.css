@@ -17,12 +17,7 @@
 	--primary: #581B98;
 }
 
-body {
-	font-family: 'Nunito', sans-serif;
-	font-weight: 400;
-	font-size: 100%;
-	background: #F1F1F1;
-}
+
 
 .chatbox__support {
 	background: #f9f9f9;
@@ -31,6 +26,10 @@ body {
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
+	position: fixed;
+	bottom: 1vh;
+	right: calc(4.25rem + 1vw);
+
 }
 
 /* HEADER */
@@ -44,10 +43,12 @@ body {
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 	box-shadow: var(--primaryBoxShadow);
+	
 }
 
 .chatbox__image--header {
 	margin-right: 10px;
+	position: fixed;
 }
 
 .chatbox__image--header img {
@@ -138,6 +139,10 @@ body {
 	border-bottom-left-radius: 50px;
 	box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 	cursor: pointer;
+	position: fixed;
+	bottom: 1vh;
+
+	right: calc(2.25rem + 1vw);
 }
 
 /* CHATBOX
