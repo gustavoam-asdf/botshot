@@ -5,13 +5,11 @@ import { mysqlPool } from "../../Shared/db"
 type iUserIdentifiers = Pick<iUser, "dni" | "nameuser" | "email" | "password">
 type iUserIdentifiersCreate = Pick<iUser, "dni" | "name" | "lastName" | "email" | "nameuser" | "password">
 type iUserIdentifiers1 = Pick<iUser, "nameuser" | "password">
+type iUserIdentifier = Pick<iUser, "dni">
 
 export async function getOneUser({
 	dni,
-	nameuser,
-	email,
-	password,
-}: iUserIdentifiers) {
+}: iUserIdentifier) {
 	const query = /*sql*/ `
 		SELECT
 			dni,
@@ -20,9 +18,9 @@ export async function getOneUser({
 			email,
 			password,
 			profile_id
-		FROM user WHERE email = ? AND password = ? AND dni = ?
+		FROM user WHERE dni = ?
 	`
-	const [result] = await mysqlPool.query<iUser[]>(query, [nameuser, email, password, dni])
+	const [result] = await mysqlPool.query<iUser[]>(query, [dni])
 
 	return result[0]
 }
@@ -85,6 +83,7 @@ export async function verifyuser({
 	const query = /*sql*/ 
 	`
 		SELECT
+			dni,
 			nameuser,
 			password
 		FROM user WHERE nameuser = ? AND password = ?

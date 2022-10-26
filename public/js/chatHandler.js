@@ -11,15 +11,38 @@ const chatbox = new InteractiveChatbox(chatButton, chatContent, messagesBox, ico
 chatbox.display()
 chatbox.toggleIcon(false, chatButton)
 
-chatbox.writeMessage({
-	mode: MESSAGE_MODE.BOTSHOT,
-	text: "¡Hola, yo soy BotSHOT 🤖!, el asistente que te ayudará a ahorrar"
-})
+// eslint-disable-next-line no-undef
+const LocaleDni = localStorage.getItem("dni")
 
-chatbox.writeMessage({
-	mode: MESSAGE_MODE.BOTSHOT,
-	text: "¿Cuál es tu nombre?"
-})
+if(LocaleDni !== undefined && LocaleDni !== null){
+
+	fetch("/findUser/" + LocaleDni, {
+		method: "GET",
+	})
+		.then((response) => response.json())
+		.then((data) => {
+			chatbox.writeMessage({
+				mode: MESSAGE_MODE.BOTSHOT,
+				text: "¡Hola, yo soy BotSHOT 🤖!, el asistente que te ayudará a ahorrar"
+			})
+			
+			chatbox.writeMessage({
+				mode: MESSAGE_MODE.BOTSHOT,
+				text: "¿En que te puedo ayudar, " + data.name + "?"
+			})
+		})
+
+}else {
+	chatbox.writeMessage({
+		mode: MESSAGE_MODE.BOTSHOT,
+		text: "¡Hola, yo soy BotSHOT 🤖!, el asistente que te ayudará a ahorrar"
+	})
+	
+	chatbox.writeMessage({
+		mode: MESSAGE_MODE.BOTSHOT,
+		text: "¿Cuál es tu nombre?"
+	})
+}
 
 const $userMessageForm = globalThis.document.getElementById("userMessageForm")
 
@@ -30,5 +53,11 @@ $userMessageForm.addEventListener("submit", (e) => {
 		mode: MESSAGE_MODE.USER,
 		text: message.value
 	})
+	
+	chatbox.writeMessage({
+		mode: MESSAGE_MODE.BOTSHOT,
+		text: "Bienvenido a BotSHOT, " + message.value
+	})
+
 	message.value = ""
 })
