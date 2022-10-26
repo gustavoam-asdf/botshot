@@ -29,7 +29,6 @@
 	position: fixed;
 	bottom: 1vh;
 	right: calc(4.25rem + 1vw);
-
 }
 
 /* HEADER */
@@ -43,7 +42,7 @@
 	border-top-left-radius: 20px;
 	border-top-right-radius: 20px;
 	box-shadow: var(--primaryBoxShadow);
-	
+
 }
 
 .chatbox__image--header {
@@ -157,6 +156,8 @@
 	display: flex;
 	flex-direction: column;
 	background: #eee;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
 	z-index: -123456;
 	opacity: 0;
 	transition: all .5s ease-in-out;
@@ -167,7 +168,6 @@
 	transform: translateY(-40px);
 	z-index: 123456;
 	opacity: 1;
-
 }
 
 /* BUTTON */
@@ -207,8 +207,8 @@
 
 /* FOOTER */
 .chatbox__footer {
-	position: sticky;
-	bottom: 0;
+	/* position: sticky; */
+	/* bottom: 0; */
 }
 
 .chatbox__footer p {
