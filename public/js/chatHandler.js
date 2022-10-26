@@ -26,9 +26,6 @@ const chatbox = new InteractiveChatbox(chatButton, chatContent, messagesBox, ico
 chatbox.display()
 chatbox.toggleIcon(false, chatButton)
 
-// eslint-disable-next-line no-undef
-const LocaleDni = localStorage.getItem("dni")
-
 chatbox.writeMessage({
 	mode: MESSAGE_MODE.BOTSHOT,
 	text: knowledgeBase[0].question
