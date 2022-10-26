@@ -135,10 +135,10 @@ const ruleGastos = new Rule({
 	question: "¿Cuántos gastos mensuales tienes?",
 	fallback: "No se pudo determinar el nivel de gastos, por favor ingresa un valor numérico",
 	conditions: [
-		condicionesGastosIngresoMinimo,
-		condicionesGastosIngresoMedio,
-		condicionesGastosIngresoAlto,
-		condicionesGastosIngresoMuyAlto
+		...condicionesGastosIngresoMinimo,
+		...condicionesGastosIngresoMedio,
+		...condicionesGastosIngresoAlto,
+		...condicionesGastosIngresoMuyAlto
 	]
 })
 

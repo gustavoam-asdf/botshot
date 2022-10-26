@@ -1,3 +1,5 @@
+import { Condition } from "./Condition.js"
+
 export class Rule {
 	constructor({
 		name,
@@ -10,6 +12,9 @@ export class Rule {
 		this.description = description
 		this.question = question
 		this.fallback = fallback
+		/**
+		 * @type {Condition[]}
+		 */
 		this.conditions = conditions
 	}
 

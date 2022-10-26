@@ -6,12 +6,20 @@ export class Condition {
 	}) {
 		this.name = name
 		this.verifier = verifier
+		/**
+		 * @type {Condition}
+		 */
 		this.precondition = precondition
 		this.status = false
 	}
 
 	verify(value) {
-		this.status = this.verifier(value)
+		try {
+			this.status = this.verifier(value)
+		} catch (error) {
+			console.error(error)
+			this.status = false
+		}
 		return this.status
 	}
 }
