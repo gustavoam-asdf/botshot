@@ -3,24 +3,24 @@ import { Rule } from "./Rule.js"
 
 const condicionIngresosBajos = new Condition({
 	name: "Ingresos bajos",
-	verifier: (value) => value < 1300
+	verifier: (value) => Number(value) < 1300
 })
 
 /**Regla de ingresos */
 
 const condicionIngresosMedios = new Condition({
 	name: "Ingresos medios",
-	verifier: (value) => value < 3970
+	verifier: (value) => Number(value) < 3970
 })
 
 const condicionIngresosAltos = new Condition({
 	name: "Ingresos altos",
-	verifier: (value) => value < 12660
+	verifier: (value) => Number(value) < 12660
 })
 
 const condicionIngresosMuyAltos = new Condition({
 	name: "Ingresos muy altos",
-	verifier: (value) => value >= 12660
+	verifier: (value) => Number(value) >= 12660
 })
 
 const ruleIngresos = new Rule({
@@ -40,22 +40,22 @@ const ruleIngresos = new Rule({
 const condicionesGastosIngresoMinimo = [
 	new Condition({
 		name: "Gastos mínimos",
-		verifier: (value) => value < 390,
+		verifier: (value) => Number(value) < 390,
 		precondition: condicionIngresosBajos
 	}),
 	new Condition({
 		name: "Gastos moderados",
-		verifier: (value) => value < 975,
+		verifier: (value) => Number(value) < 975,
 		precondition: condicionIngresosBajos
 	}),
 	new Condition({
 		name: "Gastos altos",
-		verifier: (value) => value < 1300,
+		verifier: (value) => Number(value) < 1300,
 		precondition: condicionIngresosBajos
 	}),
 	new Condition({
 		name: "Gastos excesivos",
-		verifier: (value) => value >= 1300,
+		verifier: (value) => Number(value) >= 1300,
 		precondition: condicionIngresosBajos
 	})
 ]
@@ -63,22 +63,22 @@ const condicionesGastosIngresoMinimo = [
 const condicionesGastosIngresoMedio = [
 	new Condition({
 		name: "Gastos mínimos",
-		verifier: (value) => value < 1588,
+		verifier: (value) => Number(value) < 1588,
 		precondition: condicionIngresosMedios
 	}),
 	new Condition({
 		name: "Gastos moderados",
-		verifier: (value) => value < 2977,
+		verifier: (value) => Number(value) < 2977,
 		precondition: condicionIngresosMedios
 	}),
 	new Condition({
 		name: "Gastos altos",
-		verifier: (value) => value < 3970,
+		verifier: (value) => Number(value) < 3970,
 		precondition: condicionIngresosMedios
 	}),
 	new Condition({
 		name: "Gastos excesivos",
-		verifier: (value) => value >= 3970,
+		verifier: (value) => Number(value) >= 3970,
 		precondition: condicionIngresosMedios
 	})
 ]
@@ -86,22 +86,22 @@ const condicionesGastosIngresoMedio = [
 const condicionesGastosIngresoAlto = [
 	new Condition({
 		name: "Gastos mínimos",
-		verifier: (value) => value < 5064,
+		verifier: (value) => Number(value) < 5064,
 		precondition: condicionIngresosAltos
 	}),
 	new Condition({
 		name: "Gastos moderados",
-		verifier: (value) => value < 9495,
+		verifier: (value) => Number(value) < 9495,
 		precondition: condicionIngresosAltos
 	}),
 	new Condition({
 		name: "Gastos altos",
-		verifier: (value) => value < 12660,
+		verifier: (value) => Number(value) < 12660,
 		precondition: condicionIngresosAltos
 	}),
 	new Condition({
 		name: "Gastos excesivos",
-		verifier: (value) => value >= 12660,
+		verifier: (value) => Number(value) >= 12660,
 		precondition: condicionIngresosAltos
 	})
 ]
@@ -109,22 +109,22 @@ const condicionesGastosIngresoAlto = [
 const condicionesGastosIngresoMuyAlto = [
 	new Condition({
 		name: "Gastos mínimos",
-		verifier: (value) => value < 40000,
+		verifier: (value) => Number(value) < 40000,
 		precondition: condicionIngresosMuyAltos
 	}),
 	new Condition({
 		name: "Gastos moderados",
-		verifier: (value) => value < 75000,
+		verifier: (value) => Number(value) < 75000,
 		precondition: condicionIngresosMuyAltos
 	}),
 	new Condition({
 		name: "Gastos altos",
-		verifier: (value) => value < 100000,
+		verifier: (value) => Number(value) < 100000,
 		precondition: condicionIngresosMuyAltos
 	}),
 	new Condition({
 		name: "Gastos excesivos",
-		verifier: (value) => value >= 100000,
+		verifier: (value) => Number(value) >= 100000,
 		precondition: condicionIngresosMuyAltos
 	})
 ]
