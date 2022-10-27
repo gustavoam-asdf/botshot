@@ -18,7 +18,7 @@ const icons = {
 	isClicked: "<img src='./img/chat/icons/chatbox-icon.svg' />",
 	isNotClicked: "<img src='./img/chat/icons/chatbox-icon.svg' />"
 }
-const chatbox = new InteractiveChatbox(chatButton, chatContent, messagesBox, icons)
+const chatbox = new InteractiveChatbox(chatButton, chatContent, messagesBox, icons) 
 chatbox.display()
 chatbox.toggleIcon(false, chatButton)
 
@@ -125,9 +125,6 @@ function calculateResults() {
 		results.push("Plantéate eliminar la mayor cantidad de gastos innecesarios que puedas y la mejor manera de hacerlo es ponerte a pensar todo los gastos que hiciste diariamiente y veras que tendras ingresos")
 		results.push("No te endeudes para cubrir otras deudas")
 	}
-
-
-
 	if (ingresosCategory === 1 && gastosCategory === 4 && nivelEducativoCategory === 0) {
 		results.push("Nivel de riesgo: Medio")
 		results.push("Debe a recurrir ahorrar un 25% de su sueldo y invertirlo asi generando pasivos para poder terminar su educacion")
