@@ -14,6 +14,18 @@ export class InteractiveChatbox {
 		this.state = false
 	}
 
+	#dottedMessage () {
+		const message = globalThis.document.createElement("div")
+		message.classList.add("messages__item")
+		message.classList.add("messages__item--typing")
+		message.innerHTML = `
+			<span class="messages__dot"></span>
+			<span class="messages__dot"></span>
+			<span class="messages__dot"></span>
+		`
+		return message
+	}
+
 	writeMessage({ mode, text }) {
 		const { messagesBox } = this.args
 
@@ -22,6 +34,15 @@ export class InteractiveChatbox {
 		message.classList.add(`messages__item--${mode}`)
 		message.innerHTML = text
 
+		if (mode === MESSAGE_MODE.BOTSHOT) {
+			const dottedMessage = this.#dottedMessage()
+			messagesBox.appendChild(dottedMessage)
+			setTimeout(() => {
+				dottedMessage.remove()
+				messagesBox.appendChild(message)
+			}, 700)
+			return
+		}
 		messagesBox.appendChild(message)
 	}
 
