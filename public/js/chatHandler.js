@@ -18,7 +18,7 @@ const icons = {
 	isClicked: "<img src='./img/chat/icons/chatbox-icon.svg' />",
 	isNotClicked: "<img src='./img/chat/icons/chatbox-icon.svg' />"
 }
-const chatbox = new InteractiveChatbox(chatButton, chatContent, messagesBox, icons) 
+const chatbox = new InteractiveChatbox(chatButton, chatContent, messagesBox, icons)
 chatbox.display()
 chatbox.toggleIcon(false, chatButton)
 
@@ -37,6 +37,7 @@ const $userMessageForm = globalThis.document.getElementById("userMessageForm")
 $userMessageForm.addEventListener("submit", (e) => {
 	e.preventDefault()
 	const { message } = $userMessageForm
+	if (message.value.trim() === "") return
 	chatbox.writeMessage({
 		mode: MESSAGE_MODE.USER,
 		text: message.value
@@ -69,7 +70,7 @@ function botSHOTResponsesHandler(userResponse) {
 		return condition.verify(userResponse)
 	})
 
-	if (!someConditionIsTrue) {
+	if (!someConditionIsTrue || userResponse.trim() === "") {
 		chatbox.writeMessage({
 			mode: MESSAGE_MODE.BOTSHOT,
 			text: rule.fallback
