@@ -102,7 +102,7 @@ function calculateResults() {
 
 	if (ingresosCategory === 0 && gastosCategory === 0 && nivelEducativoCategory === 0) {
 		results.push("Nivel de riesgo: Medio")
-		results.push("Debe a recurrir ahorrar un 25% de su sueldo y invertirlo asi generando pasivos para poder terminar su educacion")
+		results.push("Debe a recurrir ahorrar un 25% de su sueldo y invertirlo asi generando pasivos para poder terminar su educación")
 	}
 	if (ingresosCategory === 0 && gastosCategory === 0 && nivelEducativoCategory === 1) {
 		results.push("Nivel de riesgo: Medio Bajo")
@@ -110,7 +110,7 @@ function calculateResults() {
 	}
 	if (ingresosCategory === 0 && gastosCategory === 1 && nivelEducativoCategory === 0) {
 		results.push("Nivel de riesgo: Medio Alto")
-		results.push("Debe a recurrir ahorrar un 12% de su sueldo y invertirlo asi generando pasivos y con eso poder terminar su eduacion,pero ten cuidado estas a punto de gastar todo tu sueldo")
+		results.push("Debe a recurrir ahorrar un 12% de su sueldo y invertirlo asi generando pasivos y con eso poder terminar su educación,pero ten cuidado estas a punto de gastar todo tu sueldo")
 	}
 	if (ingresosCategory === 0 && gastosCategory === 1 && nivelEducativoCategory === 1) {
 		results.push("Nivel de riesgo: Medio")
@@ -118,7 +118,7 @@ function calculateResults() {
 	}
 	if (ingresosCategory === 0 && gastosCategory === 2 && nivelEducativoCategory === 0) {
 		results.push("Nivel de riesgo: Alto")
-		results.push("Plantéate a eliminar ciertos gastos innecesarios y busca crear un fondo de emergencias para prever riesgos ya que al no tener una educacion superior se te dificulta al buscar oportunidades")
+		results.push("Plantéate a eliminar ciertos gastos innecesarios y busca crear un fondo de emergencias para prever riesgos ya que al no tener una educación superior se te dificulta al buscar oportunidades")
 	}
 	if (ingresosCategory === 0 && gastosCategory === 2 && nivelEducativoCategory === 1) {
 		results.push("Nivel de riesgo: Medio Alto")
@@ -130,7 +130,7 @@ function calculateResults() {
 
 	if (ingresosCategory === 1 && gastosCategory === 4 && nivelEducativoCategory === 0) {
 		results.push("Nivel de riesgo: Medio")
-		results.push("Debe a recurrir ahorrar un 25% de su sueldo y invertirlo asi generando pasivos para poder terminar su educacion")
+		results.push("Debe a recurrir ahorrar un 25% de su sueldo y invertirlo asi generando pasivos para poder terminar su educación")
 	}
 	if (ingresosCategory === 1 && gastosCategory === 4 && nivelEducativoCategory === 1) {
 		results.push("Nivel de riesgo: Medio Bajo")
@@ -162,11 +162,11 @@ function calculateResults() {
 	}
 	if (ingresosCategory === 2 && gastosCategory === 8 && nivelEducativoCategory === 1) {
 		results.push("Nivel de riesgo: Medio Bajo")
-		results.push("Debe a recurrir ahorrar un 12% de su sueldo y invertirlo asi generando pasivos y con eso poder terminar su eduacion,pero ten cuidado estas a punto de gastar todo tu sueldo")
+		results.push("Debe a recurrir ahorrar un 12% de su sueldo y invertirlo asi generando pasivos y con eso poder terminar su educación,pero ten cuidado estas a punto de gastar todo tu sueldo")
 	}
 	if (ingresosCategory === 2 && gastosCategory === 9 && nivelEducativoCategory === 0) {
 		results.push("Nivel de riesgo: Medio Alto")
-		results.push("Debe a recurrir ahorrar un 12% de su sueldo y invertirlo asi generando pasivos y con eso poder terminar su eduacion,pero ten cuidado estas a punto de gastar todo tu sueldo ")
+		results.push("Debe a recurrir ahorrar un 12% de su sueldo y invertirlo asi generando pasivos y con eso poder terminar su educación,pero ten cuidado estas a punto de gastar todo tu sueldo ")
 	}
 	if (ingresosCategory === 2 && gastosCategory === 9 && nivelEducativoCategory === 1) {
 		results.push("Nivel de riesgo: Medio")
@@ -174,7 +174,7 @@ function calculateResults() {
 	}
 	if (ingresosCategory === 2 && gastosCategory === 10 && nivelEducativoCategory === 0) {
 		results.push("Nivel de riesgo: Alto")
-		results.push("Planteate a eliminar ciertos gastos innecesarios  y busca crear un fondo de emergencias para prever riesgos ya que al no tener una educacion superior se te dificulta al buscar oportunidades")
+		results.push("Planteate a eliminar ciertos gastos innecesarios  y busca crear un fondo de emergencias para prever riesgos ya que al no tener una educación superior se te dificulta al buscar oportunidades")
 	}
 	if (ingresosCategory === 2 && gastosCategory === 10 && nivelEducativoCategory === 1) {
 		results.push("Nivel de riesgo: Medio Alto")
@@ -186,7 +186,7 @@ function calculateResults() {
 
 	if (ingresosCategory === 3 && gastosCategory === 12 && nivelEducativoCategory === 0) {
 		results.push("Nivel de riesgo: Medio")
-		results.push("Debe a recurrir ahorrar un 25% de su sueldo y invertirlo asi generando pasivos para poder terminar su educacion")
+		results.push("Debe a recurrir ahorrar un 25% de su sueldo y invertirlo asi generando pasivos para poder terminar su educación")
 	}
 	if (ingresosCategory === 3 && gastosCategory === 12 && nivelEducativoCategory === 1) {
 		results.push("Nivel de riesgo: Medio Bajo")
@@ -194,7 +194,7 @@ function calculateResults() {
 	}
 	if (ingresosCategory === 3 && gastosCategory === 13 && nivelEducativoCategory === 0) {
 		results.push("Nivel de riesgo: Medio Alto")
-		results.push("Debe a recurrir ahorrar un 12% de su sueldo y invertirlo asi generando pasivos y con eso poder terminar su eduacion,pero ten cuidado estas a punto de gastar todo tu sueldo")
+		results.push("Debe a recurrir ahorrar un 12% de su sueldo y invertirlo asi generando pasivos y con eso poder terminar su educación,pero ten cuidado estas a punto de gastar todo tu sueldo")
 	}
 	if (ingresosCategory === 3 && gastosCategory === 13 && nivelEducativoCategory === 1) {
 		results.push("Nivel de riesgo: Medio")
@@ -202,7 +202,7 @@ function calculateResults() {
 	}
 	if (ingresosCategory === 3 && gastosCategory === 14 && nivelEducativoCategory === 0) {
 		results.push("Nivel de riesgo: Alto")
-		results.push("Planteate a eliminar ciertos gastos innecesarios  y busca crear un fondo de emergencias para prever riesgos ya que al no tener una educacion superior se te dificulta al buscar oportunidades")
+		results.push("Planteate a eliminar ciertos gastos innecesarios  y busca crear un fondo de emergencias para prever riesgos ya que al no tener una educación superior se te dificulta al buscar oportunidades")
 	}
 	if (ingresosCategory === 3 && gastosCategory === 14 && nivelEducativoCategory === 1) {
 		results.push("Nivel de riesgo: Medio Alto")
