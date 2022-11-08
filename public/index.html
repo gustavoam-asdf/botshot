@@ -12,7 +12,7 @@
 	<meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
 	<meta http-equiv="Pragma" content="no-cache">
 	<link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
-	<link rel="stylesheet" " href=" ./css/style.css">
+	<link rel="stylesheet" href=" ./css/style.css">
 	<link rel="stylesheet" href="./css/chat.css">
 	<link rel="stylesheet" href="./css/typing.css">
 	<link rel="stylesheet" href="./sass/styles.css">
@@ -88,8 +88,8 @@
 			<img src="./img/wave.svg" alt="división" class="wave" />
 			<div class="experiences-body">
 				<h2 class="experiences-title">Plan de ahorros</h2>
-				<div class="container">
-					<form class="row g-3">
+				<div class="container savingsPlanFormContainer">
+					<form class="row g-3" id="savingsPlanForm">
 						<div class="mb-3">
 							<label for="amount" class="form-label">Monto a ahorrar:</label>
 							<input type="text" class="form-control" id="amount">
@@ -111,7 +111,7 @@
 								</ul>
 							</div>
 						</div>
-						
+
 						<div class="mb-3">
 							<label for="inputState" class="form-label">Nivel socioeconómico</label>
 							<select id="inputState" class="form-select">
