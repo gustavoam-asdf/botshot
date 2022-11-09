@@ -13,6 +13,10 @@ const anclas = ulSelect.querySelectorAll("a")
 anclas.forEach(a => {
 	a.addEventListener("click", e => {
 		e.preventDefault()
+
+		const btnTime = globalThis.document.getElementById("btnTime")
+		btnTime.textContent = e.target.innerText
+		console.log(e.target.innerText)
 	})
 })
 
